@@ -65,7 +65,7 @@ class Normalizer extends JString
      */
     public function digitize()
     {
-        return $this->replace('/[一二三四五六七八九十百千]+(?=[段路街巷弄號樓])/u', function ($m) {
+        return $this->replace('/[一二三四五六七八九十百千]+(?=[巷弄號樓])/u', function ($m) {
             return (new static($m[0]))->chineseToNumber();
         });
     }
